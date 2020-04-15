@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 14px; }
+table       { font-size: 14px; }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 30px;
+	color: gray;
+	text-align:center;
+}
+
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 2ex;
+}
+
+.heading .description {
+    margin-top: 2ex;
+    margin-bottom: 3ex;
+    font-size: 16px
+}
+
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">自动化测试报告</h1>
+<p class='attribute'><strong>测试人员 : </strong> QA</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-04-15 09:35:48</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:03:26.901569</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 5，通过 4，错误 1，通过率 80.00%</p>
+
+<p class='description'>环境：windows 10</p>
+</div>
+
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要[ 80.00% ]</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败[ 0 ]</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过[ 4 ]</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有[ 5 ]</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>S001_ConnEditInfo.ConnEditInfo</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',1)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_search_in</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  
+
+    <!-- 默认展开错误信息 -Findyou 
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in"> -->
+    <pre>
+    
+pt1_1: path_Name: S001_ConnEditInfo
+path_Name: S001_ConnEditInfo
+log_path_excel: C:\Users\dingr\PycharmProjects\PubSdkAuto\\Log\
+file_case_name: C:\Users\dingr\PycharmProjects\PubSdkAuto\\Log\S001_ConnEditInfo
+2020-04-15 09:35:52,741 - S001_ConnEditInfo - INFO - 驱动加载成功
+2020-04-15 09:35:53,225 - S001_ConnEditInfo - INFO - 设置版本号，手机号，星球paddid等信息
+2020-04-15 09:36:08,770 - S001_ConnEditInfo - INFO - btn_set_version_name click pass！：
+2020-04-15 09:36:19,704 - S001_ConnEditInfo - INFO - btn_set_version_code click pass！：
+2020-04-15 09:36:30,752 - S001_ConnEditInfo - INFO - btn_set_phone click pass！：
+2020-04-15 09:36:41,733 - S001_ConnEditInfo - INFO - btn_set_passid click pass！：
+2020-04-15 09:36:54,708 - S001_ConnEditInfo - INFO - btn_set_header_extend click pass！：
+2020-04-15 09:37:04,775 - S001_ConnEditInfo - INFO - 该测试用例结束，关闭应用！
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>S002_ConnSelfEvent.ConnSelfEvent</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',1)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='pt2_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_search_in</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou -->
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse">  
+
+    <!-- 默认展开错误信息 -Findyou 
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse in"> -->
+    <pre>
+    
+pt2_1: path_Name: S002_ConnSelfEvent
+path_Name: S002_ConnSelfEvent
+log_path_excel: C:\Users\dingr\PycharmProjects\PubSdkAuto\\Log\
+file_case_name: C:\Users\dingr\PycharmProjects\PubSdkAuto\\Log\S002_ConnSelfEvent
+2020-04-15 09:37:08,774 - S002_ConnSelfEvent - INFO - 驱动加载成功
+2020-04-15 09:37:08,898 - S002_ConnSelfEvent - INFO - 设置版本号，手机号，星球paddid等信息
+2020-04-15 09:37:08,929 - S002_ConnSelfEvent - INFO - 包含imei，mac，uid，uuid等信息
+2020-04-15 09:37:08,955 - S002_ConnSelfEvent - INFO - 根据事件id，统计事件次数
+2020-04-15 09:37:08,994 - S002_ConnSelfEvent - INFO - 根据页面id，开始结束时间，统计页面累计使用时长
+2020-04-15 09:37:09,023 - S002_ConnSelfEvent - INFO - 生成点击位置相对坐标，上报服务器，用于反作弊分析
+2020-04-15 09:37:09,047 - S002_ConnSelfEvent - INFO - 宿主应用自定义业务事件
+2020-04-15 09:37:24,606 - S002_ConnSelfEvent - INFO - 该测试用例结束，关闭应用！
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>S003_ConnClickEvent.ConnClickEvent</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c3',1)" class="detail" id='c3'>详细</a></td>
+</tr>
+
+<tr id='pt3_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_search_in</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou -->
+    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
+    <div id='div_pt3_1' class="collapse">  
+
+    <!-- 默认展开错误信息 -Findyou 
+    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
+    <div id='div_pt3_1' class="collapse in"> -->
+    <pre>
+    
+pt3_1: path_Name: S003_ConnClickEvent
+path_Name: S003_ConnClickEvent
+log_path_excel: C:\Users\dingr\PycharmProjects\PubSdkAuto\\Log\
+file_case_name: C:\Users\dingr\PycharmProjects\PubSdkAuto\\Log\S003_ConnClickEvent
+2020-04-15 09:37:28,578 - S003_ConnClickEvent - INFO - 驱动加载成功
+2020-04-15 09:37:28,703 - S003_ConnClickEvent - INFO - 设置版本号，手机号，星球paddid等信息
+2020-04-15 09:37:28,738 - S003_ConnClickEvent - INFO - 包含imei，mac，uid，uuid等信息
+2020-04-15 09:37:28,772 - S003_ConnClickEvent - INFO - 根据事件id，统计事件次数
+2020-04-15 09:37:28,818 - S003_ConnClickEvent - INFO - 根据页面id，开始结束时间，统计页面累计使用时长
+2020-04-15 09:37:28,882 - S003_ConnClickEvent - INFO - 生成点击位置相对坐标，上报服务器，用于反作弊分析
+2020-04-15 09:37:44,657 - S003_ConnClickEvent - INFO - 该测试用例结束，关闭应用！
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>S004_ConnErrorUp.ConnErrorUp</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c4',1)" class="detail" id='c4'>详细</a></td>
+</tr>
+
+<tr id='pt4_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_search_in</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou -->
+    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
+    <div id='div_pt4_1' class="collapse">  
+
+    <!-- 默认展开错误信息 -Findyou 
+    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
+    <div id='div_pt4_1' class="collapse in"> -->
+    <pre>
+    
+pt4_1: path_Name: S004_ConnErrorUp
+path_Name: S004_ConnErrorUp
+log_path_excel: C:\Users\dingr\PycharmProjects\PubSdkAuto\\Log\
+file_case_name: C:\Users\dingr\PycharmProjects\PubSdkAuto\\Log\S004_ConnErrorUp
+2020-04-15 09:37:48,640 - S004_ConnErrorUp - INFO - 驱动加载成功
+2020-04-15 09:37:48,823 - S004_ConnErrorUp - INFO - 设置版本号，手机号，星球paddid等信息
+2020-04-15 09:37:48,888 - S004_ConnErrorUp - INFO - 包含imei，mac，uid，uuid等信息
+2020-04-15 09:37:48,912 - S004_ConnErrorUp - INFO - 根据事件id，统计事件次数
+2020-04-15 09:37:48,938 - S004_ConnErrorUp - INFO - 根据页面id，开始结束时间，统计页面累计使用时长
+2020-04-15 09:37:48,966 - S004_ConnErrorUp - INFO - 生成点击位置相对坐标，上报服务器，用于反作弊分析
+2020-04-15 09:37:48,993 - S004_ConnErrorUp - INFO - 宿主应用自定义业务事件
+2020-04-15 09:37:49,026 - S004_ConnErrorUp - INFO - 宿主应用自定义网络监控信息
+2020-04-15 09:37:49,050 - S004_ConnErrorUp - INFO - 宿主应用崩溃错误捕获，或宿主主动上报错误
+2020-04-15 09:38:04,040 - S004_ConnErrorUp - INFO - btn_report_error click pass！：
+2020-04-15 09:38:04,084 - S004_ConnErrorUp - INFO - 该测试用例结束，关闭应用！
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='errorClass warning'>
+    <td>S005_ConnMethodAdjust.ConnMethodAdjust</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center">1</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c5',1)" class="detail" id='c5'>详细</a></td>
+</tr>
+
+<tr id='ft5_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_search_in</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou -->
+    <button id='btn_ft5_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft5_1'>错误</button>
+    <div id='div_ft5_1' class="collapse">  
+
+    <!-- 默认展开错误信息 -Findyou 
+    <button id='btn_ft5_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft5_1'>错误</button>
+    <div id='div_ft5_1' class="collapse in"> -->
+    <pre>
+    
+ft5_1: path_Name: S005_ConnMethodAdjust
+path_Name: S005_ConnMethodAdjust
+log_path_excel: C:\Users\dingr\PycharmProjects\PubSdkAuto\\Log\
+file_case_name: C:\Users\dingr\PycharmProjects\PubSdkAuto\\Log\S005_ConnMethodAdjust
+2020-04-15 09:38:18,105 - S005_ConnMethodAdjust - INFO - 驱动加载成功
+2020-04-15 09:38:18,295 - S005_ConnMethodAdjust - INFO - 设置版本号，手机号，星球paddid等信息
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+2020-04-15 09:38:23,367 - S005_ConnMethodAdjust - INFO - 根据页面id，开始结束时间，统计页面累计使用时长
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+2020-04-15 09:38:28,525 - S005_ConnMethodAdjust - INFO - 生成点击位置相对坐标，上报服务器，用于反作弊分析
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+2020-04-15 09:38:33,577 - S005_ConnMethodAdjust - INFO - 宿主应用自定义业务事件
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+2020-04-15 09:38:38,680 - S005_ConnMethodAdjust - INFO - 宿主应用自定义网络监控信息
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+2020-04-15 09:38:43,766 - S005_ConnMethodAdjust - INFO - 宿主应用崩溃错误捕获，或宿主主动上报错误
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+2020-04-15 09:38:48,939 - S005_ConnMethodAdjust - INFO - 上报经纬度信息
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+2020-04-15 09:38:54,054 - S005_ConnMethodAdjust - INFO - 当程序连续多次因同一个错误发生闪退时，清除用户数据，尝试启动修复
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+2020-04-15 09:38:59,129 - S005_ConnMethodAdjust - INFO - 加入黑名单的activity不参与页面统计
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+继续寻找
+2020-04-15 09:39:04,220 - S005_ConnMethodAdjust - INFO - sdk对外暴露方法调用
+2020-04-15 09:39:05,688 - S005_ConnMethodAdjust - INFO - 该测试用例结束，关闭应用！
+
+Traceback (most recent call last):
+  File "C:\Users\dingr\PycharmProjects\PubSdkAuto\test_Case\S005_ConnMethodAdjust.py", line 56, in test_search_in
+    self.setEventId = PySelenuim().by_element_dr("id", "com.staticsdemo:id/edt_error_tag")
+  File "C:\Users\dingr\PycharmProjects\PubSdkAuto\elem_Encap\UI_Method.py", line 49, in by_element_dr
+    css_ele = driver.find_element_by_id(value)
+  File "C:\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 360, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Python37\lib\site-packages\appium\webdriver\webdriver.py", line 284, in find_element
+    'value': value})['value']
+  File "C:\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python37\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Python37\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>5</td>
+    <td>4</td>
+    <td>0</td>
+    <td>1</td>
+    <td>通过率：80.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+
+</body>
+</html>

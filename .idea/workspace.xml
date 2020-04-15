@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e504ab40-bba4-4a3f-91f6-754340b67ce3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Zh8liZTbTMvHTfLrunc0wwuGcQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test_Case" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dingr\PycharmProjects\PubSdkAuto\test_Case" />
+      <recent name="C:\Users\dingr\PycharmProjects\PubSdkAuto\init_Meth" />
+      <recent name="C:\Users\dingr\PycharmProjects\PubSdkAuto\elem_Encap" />
+      <recent name="C:\Users\dingr\PycharmProjects\PubSdkAuto\Config_Files" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dingr\PycharmProjects\PubSdkAuto\init_Meth" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Run">
+    <configuration name="Data_50bang_analy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PubSdkAuto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/init_Meth" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\dingr\PycharmProjects\PubSdkAuto\init_Meth\Data_50bang_analy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Data_analy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PubSdkAuto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/init_Meth" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/init_Meth/Data_analy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PubSdkAuto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PubSdkAuto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/a.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in S001_ConnEditInfo.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="PubSdkAuto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_Case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_Case/S001_ConnEditInfo.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Run" />
+        <item itemvalue="Python tests.Unittests in S001_ConnEditInfo.py" />
+        <item itemvalue="Python.Data_50bang_analy" />
+        <item itemvalue="Python.a" />
+        <item itemvalue="Python.Data_analy" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e504ab40-bba4-4a3f-91f6-754340b67ce3" name="Default Changelist" comment="" />
+      <created>1585280118024</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585280118024</updated>
+      <workItem from="1585280119325" duration="22035000" />
+      <workItem from="1585550269491" duration="56740000" />
+      <workItem from="1585905280124" duration="283000" />
+      <workItem from="1585905584223" duration="32489000" />
+      <workItem from="1586514547247" duration="2413000" />
+      <workItem from="1586740819386" duration="4415000" />
+      <workItem from="1586757835618" duration="17295000" />
+      <workItem from="1586843933409" duration="2844000" />
+      <workItem from="1586846811366" duration="8299000" />
+      <workItem from="1586914228799" duration="1922000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2472" y="178" key="#Inspections" timestamp="1585547883558">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2472" y="178" key="#Inspections/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585547883558" />
+    <state x="2472" y="178" key="#Log_Highlighting_(ideolog)" timestamp="1586845508880">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2472" y="178" key="#Log_Highlighting_(ideolog)/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586845508880" />
+    <state x="2621" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585286070136">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2621" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585286070136" />
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1586767277618">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586767277618" />
+    <state width="1877" height="254" key="GridCell.Tab.0.bottom" timestamp="1586914536136">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585628523496" />
+    <state width="1877" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586914536136" />
+    <state width="2517" height="363" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1586669570943" />
+    <state width="1877" height="189" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585710386220" />
+    <state width="1877" height="254" key="GridCell.Tab.0.center" timestamp="1586914536136">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585628523495" />
+    <state width="1877" height="254" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586914536136" />
+    <state width="2517" height="363" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1586669570943" />
+    <state width="1877" height="189" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585710386219" />
+    <state width="1877" height="254" key="GridCell.Tab.0.left" timestamp="1586914536136">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585628523495" />
+    <state width="1877" height="254" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586914536136" />
+    <state width="2517" height="363" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1586669570943" />
+    <state width="1877" height="189" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585710386219" />
+    <state width="1877" height="254" key="GridCell.Tab.0.right" timestamp="1586914536136">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585628523496" />
+    <state width="1877" height="254" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586914536136" />
+    <state width="2517" height="363" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1586669570943" />
+    <state width="1877" height="189" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585710386220" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1586514525609">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586514525609" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1586514525609">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586514525609" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1586514525608">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586514525608" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1586514525609">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586514525609" />
+    <state x="2381" y="162" key="SettingsEditor" timestamp="1585296895319">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2381" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585296895319" />
+    <state x="2560" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586757836778">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2560" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586757836778" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586740997777">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586740997777" />
+    <state x="2751" y="303" width="896" height="913" key="search.everywhere.popup/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1586669552589" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PubSdkAuto$a.coverage" NAME="a Coverage Results" MODIFIED="1586768743706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PubSdkAuto$file.coverage" NAME="file Coverage Results" MODIFIED="1586424849185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_Case" />
+    <SUITE FILE_PATH="coverage/PubSdkAuto$CommPath.coverage" NAME="CommPath Coverage Results" MODIFIED="1586743048157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Config_Files" />
+    <SUITE FILE_PATH="coverage/PubSdkAuto$Run.coverage" NAME="Run Coverage Results" MODIFIED="1586914536129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PubSdkAuto$50bang_data_analy.coverage" NAME="50bang_data_analy Coverage Results" MODIFIED="1586771387826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/init_Meth" />
+    <SUITE FILE_PATH="coverage/PubSdkAuto$Unittests_in_Script_01_py.coverage" NAME="Unittests in Script_01.py Coverage Results" MODIFIED="1586845267194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_Case" />
+    <SUITE FILE_PATH="coverage/PubSdkAuto$Get_50bang_file.coverage" NAME="Get_50bang_file Coverage Results" MODIFIED="1586486841177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/init_Meth" />
+    <SUITE FILE_PATH="coverage/PubSdkAuto$Data_analy.coverage" NAME="Data_analy Coverage Results" MODIFIED="1586762690204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/init_Meth" />
+  </component>
+</project>
