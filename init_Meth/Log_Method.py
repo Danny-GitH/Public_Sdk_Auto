@@ -5,6 +5,7 @@ __author__ = 'dingrui'
 import logging
 import os.path
 import time
+from Config_Files.CommPath import *
 import sys
 
 
@@ -19,8 +20,9 @@ class Logger():
         # 创建一个logger
         self.logger = logging.getLogger(logger)
         self.logger.setLevel(logging.DEBUG)
-
-        log_path_excel = os.path.dirname(os.getcwd()) + "\\PubSdkAuto\\" + '\\Log\\'
+        conn_path = ConnPath()
+        root_path = conn_path.Root_Path()
+        log_path_excel = root_path + '\\Log\\'
         print("log_path_excel:", log_path_excel)
         rq = time.strftime('%Y%m%d%H%M', time.localtime(time.time()))
         # 创建一个handler，用于写入日志文件

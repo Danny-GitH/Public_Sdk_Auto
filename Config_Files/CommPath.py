@@ -23,10 +23,13 @@ class ConnPath(object):
         config.read(path)
         return config
 
+    def Root_Path(self):
+        root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        return root_path
 
-if __name__ == '__main__':
-    connpath = ConnPath()
-    config = connpath.Conf_Path()
-    print(config)
-    root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    print(root_path)
+# if __name__ == '__main__':
+#     connpath = ConnPath()
+#     config = connpath.Conf_Path()
+#     print(config)
+#     root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#     print(root_path)

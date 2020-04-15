@@ -1,9 +1,0 @@
-2020-04-15 09:37:08,774 - S002_ConnSelfEvent - INFO - 驱动加载成功
-2020-04-15 09:37:08,898 - S002_ConnSelfEvent - INFO - 设置版本号，手机号，星球paddid等信息
-2020-04-15 09:37:08,929 - S002_ConnSelfEvent - INFO - 包含imei，mac，uid，uuid等信息
-2020-04-15 09:37:08,955 - S002_ConnSelfEvent - INFO - 根据事件id，统计事件次数
-2020-04-15 09:37:08,994 - S002_ConnSelfEvent - INFO - 根据页面id，开始结束时间，统计页面累计使用时长
-2020-04-15 09:37:09,023 - S002_ConnSelfEvent - INFO - 生成点击位置相对坐标，上报服务器，用于反作弊分析
-2020-04-15 09:37:09,047 - S002_ConnSelfEvent - INFO - 宿主应用自定义业务事件
-2020-04-15 09:37:24,606 - S002_ConnSelfEvent - INFO - 该测试用例结束，关闭应用！
-
