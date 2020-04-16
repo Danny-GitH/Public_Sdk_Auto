@@ -51,7 +51,7 @@ class ConnErrorUp(unittest.TestCase):
                     time.sleep(1)
                     self.setEventId = PySelenuim().by_element_dr("id", "com.staticsdemo:id/edt_error_tag")
                     self.setEventId.clear()
-                    self.setEventId.send_keys("danny")
+                    self.setEventId.send_keys("Danny")
                     time.sleep(1)
 
                     # 主动上报

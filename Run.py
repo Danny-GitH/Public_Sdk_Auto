@@ -44,7 +44,7 @@ class TestRunner(object):
         now = time.strftime("%Y-%m-%d_%H_%M_%S")
         fp = open("./report/" + now + "result.html", 'wb')
         case_path = self.cur_path + "\\test_Case\\"
-        tests = unittest.defaultTestLoader.discover(case_path, pattern='S00*.py', top_level_dir=None)
+        tests = unittest.defaultTestLoader.discover(case_path, pattern='S*.py', top_level_dir=None)
         runner = HTMLTestRunner(stream=fp, title=self.title, description=self.des)
         runner.run(tests)
         fp.close()

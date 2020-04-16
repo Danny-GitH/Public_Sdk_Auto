@@ -20,7 +20,7 @@ from elem_Encap.UI_Method import *
 from init_Meth.Log_Method import Logger
 
 
-class ConnClickEvent(unittest.TestCase):
+class ConnErrorUp(unittest.TestCase):
     def setUp(self, name=os.path.basename(__file__)):
         self.name = name
         obj = script_name(self.name)
@@ -46,16 +46,21 @@ class ConnClickEvent(unittest.TestCase):
             for event in self.event_types:
                 event_content = event.get_attribute("text")
                 self.mylogger.getlog().info(event.get_attribute("text"))
-                if event_content == "生成点击位置相对坐标，上报服务器，用于反作弊分析":
-
+                if event_content == "根据事件id，统计事件次数":
                     event.click()
                     time.sleep(1)
                     self.setEventId = PySelenuim().by_element_dr("id", "com.staticsdemo:id/edt_event_id")
-                    self.setEventId.send_keys("abc")
+                    self.setEventId.clear()
+                    self.setEventId.send_keys("ABC")
                     time.sleep(1)
-                    self.nowSend = PySelenuim().by_element_dr("id", "com.staticsdemo:id/btn_click")
+                    self.setEventId = PySelenuim().by_element_dr("id", "com.staticsdemo:id/edt_send_frequency")
+                    self.setEventId.clear()
+                    self.setEventId.send_keys("1")
+
+                    # 实时发送
+                    self.nowSend = PySelenuim().by_element_dr("id", "com.staticsdemo:id/btn_send_now")
                     self.nowSend.click()
-                    time.sleep(5)
+                    self.mylogger.getlog().info(u"btn_report_error click pass！：")
                     break
                 else:
                     continue
@@ -75,6 +80,7 @@ class ConnClickEvent(unittest.TestCase):
         # 读取测试报告正文
         # mail_body = f.readlines()
         f.close()
+        time.sleep(10)
         # send_Mail(self, mail_body)
 
 

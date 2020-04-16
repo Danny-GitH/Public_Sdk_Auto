@@ -1,8 +1,0 @@
-2020-04-15 14:13:25,515 - S003_ConnClickEvent - INFO - 驱动加载成功
-2020-04-15 14:13:25,718 - S003_ConnClickEvent - INFO - 设置版本号，手机号，星球paddid等信息
-2020-04-15 14:13:25,747 - S003_ConnClickEvent - INFO - 包含imei，mac，uid，uuid等信息
-2020-04-15 14:13:25,774 - S003_ConnClickEvent - INFO - 根据事件id，统计事件次数
-2020-04-15 14:13:25,807 - S003_ConnClickEvent - INFO - 根据页面id，开始结束时间，统计页面累计使用时长
-2020-04-15 14:13:25,838 - S003_ConnClickEvent - INFO - 生成点击位置相对坐标，上报服务器，用于反作弊分析
-2020-04-15 14:13:41,526 - S003_ConnClickEvent - INFO - 该测试用例结束，关闭应用！
-

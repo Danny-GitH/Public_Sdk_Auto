@@ -1,0 +1,2 @@
+clickPosEvents -> actionID: abc  期望值存在: PASS
+action -> actionID: ABC  期望值存在: PASS

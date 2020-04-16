@@ -15,10 +15,12 @@ class Files_Analy(object):
             for j in f.readlines():
                 JS = eval(j)
                 jd = collections.OrderedDict(dict(JS))
-                Data_Data_50bang(jd)
-                Tag_Data_50bang(jd)
-                ActionID_Data_50bang(jd)
                 Phone_Data_50bang(jd)
+                # Data_Data_50bang(jd)
+                ClickPosEvent_ActionID_50bang(jd)
+                Error_Up_50bang(jd)
+                # Tag_Data_50bang(jd)
+                ActionID_Data_50bang(jd)
                 # 完成json的event_type时间与sdkdatabox事件的映射
 
 

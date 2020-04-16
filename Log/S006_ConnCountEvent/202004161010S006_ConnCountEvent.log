@@ -1,0 +1,7 @@
+2020-04-16 10:10:39,428 - S006_ConnCountEvent - INFO - 驱动加载成功
+2020-04-16 10:10:41,216 - S006_ConnCountEvent - INFO - 设置版本号，手机号，星球paddid等信息
+2020-04-16 10:10:41,274 - S006_ConnCountEvent - INFO - 包含imei，mac，uid，uuid等信息
+2020-04-16 10:10:41,318 - S006_ConnCountEvent - INFO - 根据事件id，统计事件次数
+2020-04-16 10:10:59,815 - S006_ConnCountEvent - INFO - btn_report_error click pass！：
+2020-04-16 10:11:00,333 - S006_ConnCountEvent - INFO - 该测试用例结束，关闭应用！
+

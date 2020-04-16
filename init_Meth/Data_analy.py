@@ -22,103 +22,21 @@ def text_create(key_name):
     return file
 
 
-def Data_Data_50bang(js):
-    if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
-        for key in js:
-            if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
-                Data_Data_50bang(js[key])
-
-            elif isinstance(js[key], list):
-                len_list_js = len(js[key])
-                for j in range(0, len_list_js):
-                    Data_Data_50bang(js[key][j])
-            else:
-                # print(str(key) + " : " + str(js[key]))
-                # file = text_create(key)
-                if key == "data":
-                    file = text_create(key)
-                    if js[key] == "cdf":
-                        file.write('data: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
-                        # print(str(key) + " : " + str(js[key]))
-                        break
-                    else:
-                        file.write('data: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
-                    file.close()
-    else:
-        def_name = sys._getframe().f_code.co_name
-        file = text_create(def_name)
-        file.write(def_name + ' :数据格式有问题' + '\n')
-        file.close()
-        return False
-
-
-def Tag_Data_50bang(js):
-    if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
-        for key in js:
-            if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
-                Tag_Data_50bang(js[key])
-
-            elif isinstance(js[key], list):
-                len_list_js = len(js[key])
-                for j in range(0, len_list_js):
-                    Tag_Data_50bang(js[key][j])
-            else:
-                # print(str(key) + " : " + str(js[key]))
-                # file = text_create(key)
-                if key == "tag":
-                    file = text_create(key)
-                    if js[key] == "danny":
-                        file.write('tag: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
-                        # print(str(key) + " : " + str(js[key]))
-                        break
-                    else:
-                        file.write('tag: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
-                    file.close()
-    else:
-        def_name = sys._getframe().f_code.co_name
-        file = text_create(def_name)
-        file.write(def_name + ' :数据格式有问题' + '\n')
-        file.close()
-        return False
-
-
-def ActionID_Data_50bang(js):
-    if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
-        for key in js:
-            if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
-                ActionID_Data_50bang(js[key])
-
-            elif isinstance(js[key], list):
-                len_list_js = len(js[key])
-                for j in range(0, len_list_js):
-                    ActionID_Data_50bang(js[key][j])
-            else:
-                # print(str(key) + " : " + str(js[key]))
-                # file = text_create(key)
-                if key == "actionID":
-                    file = text_create(key)
-                    if js[key] == "\"{\"a\":123}\"":
-                        file.write('actionID: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
-                        # print(str(key) + " : " + str(js[key]))
-                        break
-                    else:
-                        file.write('actionID: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
-                    file.close()
-    else:
-        def_name = sys._getframe().f_code.co_name
-        file = text_create(def_name)
-        file.write(def_name + ' :数据格式有问题' + '\n')
-        file.close()
-        return False
-
-
 def Phone_Data_50bang(js):
+    """
+    对应脚本S001，手机号、pass_id、extend
+    :param js:
+    :return:
+    """
     if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
+        global fa_key
         for key in js:
             if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
+                # fa_key = key
                 Phone_Data_50bang(js[key])
 
             elif isinstance(js[key], list):
+                # fa_key = key
                 len_list_js = len(js[key])
                 for j in range(0, len_list_js):
                     Phone_Data_50bang(js[key][j])
@@ -128,26 +46,26 @@ def Phone_Data_50bang(js):
                 if key == "phone":
                     file = text_create(key)
                     if js[key] == "1565655":
-                        file.write('phone: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
+                        file.write('header -> phone: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
                         # print(str(key) + " : " + str(js[key]))
                     else:
-                        file.write('phone: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
+                        file.write('header -> phone: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
                     file.close()
                 if key == "pass_id":
                     file = text_create(key)
                     if js[key] == "13579":
-                        file.write('pass_id: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
+                        file.write('header -> pass_id: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
                         # print(str(key) + " : " + str(js[key]))
                     else:
-                        file.write('pass_id: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
+                        file.write('header -> pass_id: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
                     file.close()
                 if key == "extend":
                     file = text_create(key)
                     if js[key] == "098":
-                        file.write('extend: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
+                        file.write('header -> extend: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
                         # print(str(key) + " : " + str(js[key]))
                     else:
-                        file.write('extend: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
+                        file.write('header -> extend: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
                     file.close()
     else:
         def_name = sys._getframe().f_code.co_name
@@ -156,72 +74,192 @@ def Phone_Data_50bang(js):
         file.close()
         return False
 
-    #
-    # if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
-    #     for key in js:
-    #         if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
-    #             js_Data_50bang(js[key])
-    #         elif isinstance(js[key], list):
-    #             len_list_js = len(js[key])
-    #             for j in range(0, len_list_js):
-    #                 js_Data_50bang(js[key][j])
-    #         else:
-    #             if key == "actionID":
-    #                 # file = text_create(key)
-    #                 if js[key] == "\"{\"a\":123}\"":
-    #                     file.write('actionID: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
-    #                     # print(str(key) + " : " + str(js[key]))
-    #                     break
-    #                 else:
-    #                     file.write('actionID: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
-    #                 # file.close()
-    # else:
-    #     print("数据格式有问题")
-    #     return False
-    #
-    # if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
-    #     for key in js:
-    #         if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
-    #             js_Data_50bang(js[key])
-    #         elif isinstance(js[key], list):
-    #             len_list_js = len(js[key])
-    #             for j in range(0, len_list_js):
-    #                 js_Data_50bang(js[key][j])
-    #         else:
-    #             if key == "pass_id":
-    #                 # file = text_create(key)
-    #                 if js[key] == "13579":
-    #                     file.write('pass_id: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
-    #                     # print(str(key) + " : " + str(js[key]))
-    #                     break
-    #                 else:
-    #                     file.write('pass_id: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
-    #                 # file.close()
-    # else:
-    #     print("数据格式有问题")
-    #     return False
-    #
-    # if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
-    #     for key in js:
-    #         if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
-    #             js_Data_50bang(js[key])
-    #         elif isinstance(js[key], list):
-    #             len_list_js = len(js[key])
-    #             for j in range(0, len_list_js):
-    #                 js_Data_50bang(js[key][j])
-    #         else:
-    #             if key == "phone":
-    #                 # file = text_create(key)
-    #                 if js[key] == "15656550098":
-    #                     file.write('phone: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
-    #                     # print(str(key) + " : " + str(js[key]))
-    #                     break
-    #                 else:
-    #                     file.write('phone: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
-    # else:
-    #     print("数据格式有问题")
-    #     return False
-    # file.close()
+
+def Data_Data_50bang(js):
+    """
+    对应脚本S002，data事件
+    :param js:
+    :return:
+    """
+    if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
+        for key in js:
+            if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
+                Data_Data_50bang(js[key])
+
+            elif isinstance(js[key], list):
+                global fa_key
+                len_list_js = len(js[key])
+                for j in range(0, len_list_js):
+                    Data_Data_50bang(js[key][j])
+            else:
+                # print(str(key) + " : " + str(js[key]))
+                # file = text_create(key)
+                if key == "data" and fa_key == "data":
+                    file = text_create(key)
+                    if js[key] == "abc":
+                        file.write('data -> data: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
+                        # print(str(key) + " : " + str(js[key]))
+                        break
+                    else:
+                        file.write('data -> data: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
+                    file.close()
+    else:
+        def_name = sys._getframe().f_code.co_name
+        file = text_create(def_name)
+        file.write(def_name + ' :数据格式有问题' + '\n')
+        file.close()
+        return False
+
+
+def ClickPosEvent_ActionID_50bang(js):
+    """
+    对应脚本S003，计数事件统计值
+    :param js:
+    :return:
+    """
+    if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
+        global fa_key
+        for key in js:
+            if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
+                fa_key = key
+                ClickPosEvent_ActionID_50bang(js[key])
+
+            elif isinstance(js[key], list):
+                fa_key = key
+                len_list_js = len(js[key])
+                for j in range(0, len_list_js):
+                    ClickPosEvent_ActionID_50bang(js[key][j])
+            else:
+                # print(str(key) + " : " + str(js[key]))
+                # file = text_create(key)
+                if key == "actionID" and fa_key == "clickPosEvents":
+                    file = text_create(key)
+                    if js[key] == "abc":
+                        file.write('clickPosEvents -> actionID: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
+                        # print(str(key) + " : " + str(js[key]))
+                        break
+                    else:
+                        file.write('clickPosEvents -> actionID: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
+                    file.close()
+    else:
+        def_name = sys._getframe().f_code.co_name
+        file = text_create(def_name)
+        file.write(def_name + ' :数据格式有问题' + '\n')
+        file.close()
+        return False
+
+
+def Error_Up_50bang(js):
+    """
+    对应脚本S004，主动上报错误
+    :param js:
+    :return:
+    """
+    if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
+        global fa_key
+        for key in js:
+            if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
+                fa_key = key
+                Error_Up_50bang(js[key])
+
+            elif isinstance(js[key], list):
+                fa_key = key
+                len_list_js = len(js[key])
+                for j in range(0, len_list_js):
+                    Error_Up_50bang(js[key][j])
+            else:
+                # print(str(key) + " : " + str(js[key]))
+                # file = text_create(key)
+                if key == "tag" and fa_key == "error":
+                    file = text_create(key)
+                    if js[key] == "Danny":
+                        file.write('error -> tag: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
+                        # print(str(key) + " : " + str(js[key]))
+                        break
+                    else:
+                        file.write('error -> tag: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
+                    file.close()
+    else:
+        def_name = sys._getframe().f_code.co_name
+        file = text_create(def_name)
+        file.write(def_name + ' :数据格式有问题' + '\n')
+        file.close()
+        return False
+
+
+# def Tag_Data_50bang(js):
+#     """
+#     对应脚本S005，tag事件
+#     :param js:
+#     :return:
+#     """
+#     if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
+#         for key in js:
+#             if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
+#                 Tag_Data_50bang(js[key])
+#
+#             elif isinstance(js[key], list):
+#                 len_list_js = len(js[key])
+#                 for j in range(0, len_list_js):
+#                     Tag_Data_50bang(js[key][j])
+#             else:
+#                 # print(str(key) + " : " + str(js[key]))
+#                 # file = text_create(key)
+#                 if key == "tag":
+#                     file = text_create(key)
+#                     if js[key] == "danny":
+#                         file.write('tag: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
+#                         # print(str(key) + " : " + str(js[key]))
+#                         break
+#                     else:
+#                         file.write('tag: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
+#                     file.close()
+#     else:
+#         def_name = sys._getframe().f_code.co_name
+#         file = text_create(def_name)
+#         file.write(def_name + ' :数据格式有问题' + '\n')
+#         file.close()
+#         return False
+
+
+def ActionID_Data_50bang(js):
+    """
+    对应脚本S006，计数事件统计值
+    :param js:
+    :return:
+    """
+    if isinstance(js, dict):  # 判断是否是字典类型isinstance 返回True false
+        global fa_key
+        for key in js:
+            if isinstance(js[key], dict):  # 如果dic_json[key]依旧是字典类型
+                fa_key = key
+                ActionID_Data_50bang(js[key])
+
+            elif isinstance(js[key], list):
+                fa_key = key
+                len_list_js = len(js[key])
+                for j in range(0, len_list_js):
+                    ActionID_Data_50bang(js[key][j])
+            else:
+                # print(str(key) + " : " + str(js[key]))
+                # file = text_create(key)
+                if key == "actionID" and fa_key == "action":
+                    file = text_create(key)
+                    if js[key] == "ABC":
+                        file.write('action -> actionID: ' + str(js[key]) + '  ' + '期望值存在: PASS' + '\n')
+                        # print(str(key) + " : " + str(js[key]))
+                        break
+                    else:
+                        file.write('action -> actionID: ' + str(js[key]) + '  ' + '期望值不存在: FAIL' + '\n')
+                    file.close()
+    else:
+        def_name = sys._getframe().f_code.co_name
+        file = text_create(def_name)
+        file.write(def_name + ' :数据格式有问题' + '\n')
+        file.close()
+        return False
+
+
 
 # js = collections.OrderedDict(dict(js))
 # js_Data_50bang(js)

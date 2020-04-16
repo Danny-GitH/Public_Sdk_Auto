@@ -53,18 +53,20 @@ class ConnMethodAdjust(unittest.TestCase):
                     if event_content == "sdk对外暴露方法调用":
                         event.click()
                         time.sleep(1)
-                        self.setEventId = PySelenuim().by_element_dr("id", "com.staticsdemo:id/edt_error_tag")
-                        self.setEventId.clear()
-                        self.setEventId.send_keys("danny")
+                        self.getCopyConent = PySelenuim().by_element_dr("id", "com.staticsdemo:id/btnCopy").get_attribute("text")
+                        self.assertEqual(self.getCopyConent, "点击复制")
                         time.sleep(1)
 
-                        # 主动上报
-                        self.nowSend = PySelenuim().by_element_dr("id", "com.staticsdemo:id/btn_report_error")
-                        self.nowSend.click()
-                        self.mylogger.getlog().info(u"btn_report_error click pass！")
-                        break
+                        self.event_Button = PySelenuim().by_elements("class", "android.widget.Button")
+                        if self.event_Button:
+                            for eb in self.event_Button:
+                                eb.click()
+                                self.eventConent = PySelenuim().by_element_dr("id", "com.staticsdemo:id/btnCopy").get_attribute("text")
+                                time.sleep(1)
+                                self.assertIsNotNone(self.eventConent)
+                        else:
+                            self.mylogger.getlog().info("sdk对外暴露方法调用操作不存在，请检查demo控件")
                     else:
-                        print("继续寻找")
                         PySelenuim().swipeUp()
         else:
             print("操作事件元素找不到，请检查！")
